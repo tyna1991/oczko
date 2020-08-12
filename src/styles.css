@@ -1,1 +1,110 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.blackjack-container-center{
+    transform: translateY(-50%);
+    top: 50%;
+    position: relative;
+    text-align: center;
+}
+.btn{
+    color: #fff;
+    border: none;
+    margin: 10px;
+    padding: 16px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+}
+.btn:focus{
+    outline: none;
+}
+input{
+    padding: 10px;
+    border: 1px solid #b4b4b4;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+label{
+    text-align: center;
+}
+.user-form-container{
+    margin:15px 0px
+}
+.single-player-2{
+    width: 50%;
+    position: relative;
+}
+.single-player-3{
+    width: 33.33%;
+    position: relative;
+}
+.single-player-4{
+    width: 25%;
+    position: relative;
+}
+/* .multiplayer .single-player-2, .multiplayer .single-player-3, .multiplayer .single-player-4{
+    width: 100%;
+} */
+/* .multiplayer .player .cards-container>ul{
+    visibility:hidden;
+}
+.multiplayer .player.active .cards-container>ul{
+    visibility:visible;
+} */
+.multiplayer .allPlayers-container{
+    flex-wrap: wrap;
+}
+/* .multiplayer .end .player.active, .multiplayer .end .player .cards-container>ul{
+    visibility:visible;
+} */
+.allPlayers-container.end .single-player-3{
+   width: 33.3%;
+}
+.allPlayers-container.end .single-player-2{
+   width: 50%;
+}
+
+
+
+@media(max-width:1000px){
+    .btn{
+        padding:15px 25px;
+        font-size: 14px;
+    }
+}
+@media(max-width:767px){
+    .btn{
+        padding:15px 25px;
+        font-size: 12px;
+    }
+}
+@media(max-width:500px){
+    .btn{
+        padding:10px 25px;
+    }
+    .game-buttons{
+        margin-top: 10px;
+    }
+    .single-player-2{
+    width: 100%;
+    position: relative;
+    }
+    .allPlayers-container .single-player-2{
+        width: 100%;
+    }
+    .allPlayers-container.end .single-player-3, .allPlayers-container .single-player-3, .allPlayers-container.end .single-player-4, .allPlayers-container .single-player-4{
+        width: 50%;
+    }
+    .single-player .allPlayers-container{
+        flex-direction: column;
+    }
+}

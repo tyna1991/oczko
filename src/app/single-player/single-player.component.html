@@ -1,0 +1,21 @@
+<div class="player" [ngClass]="{'active': activePlayer}">
+  <div>
+    <div class="pointer-container"><img *ngIf="activePlayer" src="assets/pointer.svg"></div>
+    <h3>{{player.name}}</h3>
+    <div class="player-score"><span><span *ngIf="((activePlayer || player.status!=='undetermined') && compInteraction.game.gameMode==='multiplayer') || compInteraction.game.gameMode==='singlePlayer' || player.score==0">{{player.score}}</span></span></div>
+    <div *ngIf="player.status!=='undetermined'" class="result"><h4 [ngClass]="(player.status=='winner')?'winner':'looser'">
+      <span *ngIf="player.status=='winner'">WYGRANA!</span>
+      <span *ngIf="player.status=='looser'">PRZEGRANA!</span>
+    </h4></div>
+  </div>
+<div class="cards-container">
+<ul>
+<ng-container *ngIf="(activePlayer || player.status!=='undetermined') || compInteraction.game.gameMode==='singlePlayer'">
+<li *ngFor="let card of player.cards.cards">
+  <img src={{card.image}}>
+</li>
+</ng-container>
+</ul>
+</div>
+</div>
+

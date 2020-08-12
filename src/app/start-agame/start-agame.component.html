@@ -1,0 +1,19 @@
+<div class="game-multiplayer-modal hidden" id="modal_multiplayer">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <form [formGroup]="playersInfo" (ngSubmit)="onSubmit()">
+      <label id="number">Ilość graczy: </label>
+        <div class="input-group">
+        <input type="button" value="-" class="button-minus" (click)="minus()">
+        <input id="number" formControlName="number">
+        <input type="button" value="+" class="button-plus" (click)="plus()">
+      </div>
+      <div class="user-form-container">
+        <app-user-form [formNumber]="playersInfo.value.number" (namesEvent)="getNames($event)"></app-user-form>
+      </div>  
+      <div class="button-container">
+        <button class="btn">Start!</button>
+      </div>
+    </form>
+  </div>
+</div>

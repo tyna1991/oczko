@@ -1,0 +1,123 @@
+
+h3{
+    text-transform: uppercase;
+    margin: 10px;
+}
+.player-score>span{
+    margin: 0 auto;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    padding: 10px;
+    display: inline-block;
+    min-width: 15px;
+    height: 20px;
+}
+.cards-container{
+    min-height: 170px;
+}
+ul{
+    min-height: 170px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 60px 0px 40px;
+    flex-direction: row-reverse;
+    /* flex-wrap: wrap; */
+}
+ul img{
+    max-height: 150px;
+}
+ul>li{
+    margin-right: -70px;
+}
+.pointer-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+}
+.pointer-container img{
+    position: absolute;
+}
+.result{
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+h4{
+    font-size: 18px;
+    margin: 10px;
+}
+h4.winner{
+ color:#c6b51d;
+}
+h4.looser{
+color:#e5522c;
+}
+.player{
+    position: relative;
+}
+ul>li:last-child{
+    margin-left: -70px;
+}
+@media(max-width:1000px){
+    h3, h4{
+        font-size: 14px;
+    }
+    .player-score > span{
+        padding: 6px;
+        font-size: 14px;
+    }
+    
+}
+@media(max-width:767px){
+    ul img {
+        max-height: 120px;
+    }
+    .cards-container, ul{
+        min-height: 150px;
+    }
+}
+@media(max-width:600px){
+    ul img {
+        max-height: 110px;
+    }
+    .cards-container, ul{
+        min-height: 130px;
+    }
+}
+@media(max-width:500px){
+    ul img {
+        max-height: 90px;
+    }
+    .pointer-container, ul{
+        top: 5px;
+        min-height: 13px;
+    }
+    .pointer-container img{
+        height: 18px;
+    }
+    h3, h4{
+        font-size: 12px;
+        margin:6px
+    }
+    ul{
+        margin: 40px 0px 15px;
+    }
+    .cards-container, ul{
+        min-height: 100px;
+    }
+    .player-score > span{
+        padding: 4px;
+        font-size: 12px;
+    }
+    ul>li{
+        margin-right: -50px;
+    }
+    ul>li:last-child{
+    margin-left: -50px;
+}
+}

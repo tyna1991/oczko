@@ -1,0 +1,49 @@
+.btn.hit{
+    background-color: #8d35df;
+}
+.btn.stand{
+    background-color: #c6b51d;
+    color:#000
+}
+.allPlayers-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back-button{
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn.new-play{
+    padding: 15px;
+    background-color: #27302a;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 0px 0px 0px 15px
+}
+.top-buttons-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 15px;
+    align-items: center;
+}
+@media(max-width:1000px){
+    .back-button {
+        font-size: 14px;
+    }
+}
+@media(max-width:500px){
+    .top-buttons-container{
+    margin-bottom: 12px;
+}
+.back-button {
+    font-size: 12px;
+}
+.btn.new-play{
+    padding:10px
+}
+}

@@ -1,0 +1,14 @@
+<div [ngClass]="{'single-player': game.gameMode === 'singlePlayer', 'multiplayer':game.gameMode === 'multiplayer' }">
+  <div class="top-buttons-container">
+    <button (click)="endAGame()" class="back-button">Wstecz</button>
+    <button (click)="newPlay()" class="btn new-play">Nowa gra</button>
+  </div>
+  <div class="allPlayers-container" [ngClass]="{'end': !gameProgress}">
+  <ng-template #singlePlayerContainer></ng-template>
+  </div>
+  <div class="game-buttons">
+    <button class="btn hit" (click)="hitButtonSubmit()">Dobierz kartę</button>
+    <button class="btn stand" (click)="standButtonSubmit()">Pas</button>
+  </div>
+</div>
+

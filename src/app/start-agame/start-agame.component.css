@@ -1,0 +1,99 @@
+.game-multiplayer-modal{
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content{
+    background-color: #fefefe;
+    margin: auto auto;
+    border: 1px solid #888;
+    width: 50%;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    border-radius: 8px;
+    overflow: auto;
+    padding: 45px;
+    box-sizing: border-box;
+}
+.modal-content>form{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.close {
+  color: #000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+.btn{
+    background-color: #2b8078;
+}
+.button-container{
+  margin: 20px 0px 0px;
+}
+.button-minus, .button-plus{
+  border: none;
+  font-size: 24px;
+  line-height: 12px;
+  height: 40px;
+  top: 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.button-minus{
+  width: 40px;
+}
+.button-plus{
+  width: 40px;
+}
+input#number{
+  width: calc(100% - 80px);
+  box-sizing: border-box;
+}
+.input-group{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.button-plus:hover, .button-minus:hover{
+  color:#2b8078
+}
+.button-plus:focus{
+  outline: none;
+}
+.game-multiplayer-modal.hidden{
+  display:none
+}
+.game-multiplayer-modal.show{
+  display:block
+}
+@media(max-width:820px){
+  .modal-content{
+    width: 80%;
+}
+}
+@media(max-width:400px){
+  .modal-content{
+    width: 90%;
+}
+}

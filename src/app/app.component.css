@@ -1,0 +1,123 @@
+.blackjack-main-container{
+    height: 100vh;
+    background: rgba(15,92,45,1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(15,92,45,1) 0%, rgba(6,52,24,1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(15,92,45,1)), color-stop(100%, rgba(6,52,24,1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(15,92,45,1) 0%, rgba(6,52,24,1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(15,92,45,1) 0%, rgba(6,52,24,1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(15,92,45,1) 0%, rgba(6,52,24,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(15,92,45,1) 0%, rgba(6,52,24,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f5c2d', endColorstr='#063418', GradientType=1 );
+    color:#fff;
+    min-height:568px;
+    position:relative
+}
+.blackjack-main-container.frame{
+    min-height:500px;
+}
+.blackjack-main-container.frame::after{
+    content:'';
+    display: block;
+    background-image: url(./../assets/cards.png);
+    background-repeat-y: no-repeat;
+    background-position: revert;
+    background-size: 24px;
+    position: absolute;
+    top: 30px;
+    width: calc(100% - 60px);
+    transform: translateX(-50%);
+    left: 50%;
+    height: 16px;
+    opacity: .8;
+}
+.blackjack-main-container.frame::before{
+    content:'';
+    display: block;
+    background-image: url(./../assets/cards.png);
+    background-repeat-y: no-repeat;
+    background-position: revert;
+    background-size: 24px;
+    position: absolute;
+    bottom: 30px;
+    width: calc(100% - 60px);
+    transform: translateX(-50%);
+    left: 50%;
+    height: 16px;
+    opacity: .8;
+}
+.r-border{
+    background-image: url(./../assets/cards.png);
+    height: calc(100% - 60px);
+    top: 30px;
+    width: 15px;
+    position: absolute;
+    left: 30px;
+    background-repeat-y: repeat;
+    background-size: 30px;
+    opacity: .8;
+}
+.l-border{
+    background-image: url(./../assets/cards.png);
+    height: calc(100% - 60px);
+    top: 30px;
+    width: 15px;
+    position: absolute;
+    right: 30px;
+    background-repeat-y: repeat;
+    background-size: 30px;
+    opacity: .8;
+}
+h1{
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    font-size: 100px;
+    margin: 0px;
+    padding: 0 0 2% 0;
+    color: #fff;
+    text-shadow: 3px 3px #499e6b;
+}
+
+.btn.single-player{
+    background-color: #d32a2a;
+}
+.btn.multiplayer{
+    background-color: #48d5c8;
+    color:#000
+}
+.game-mode-select-container{
+    width: 80%;
+    margin: 0 auto;
+}
+@media(max-width:767px){
+    h1{
+       font-size: 85px;
+    }
+}
+@media(max-width:580px){
+    .l-border, .r-border{
+        height: calc(100% - 30px);
+        top: 15px;
+    }
+    .r-border{
+        left: 15px;
+    }
+    .l-border{
+        right: 15px;
+    }
+    .blackjack-main-container.frame::before{
+    bottom: 15px;
+    width: calc(100% - 30px);
+    }
+    .blackjack-main-container.frame::after{
+    top: 15px;
+    width: calc(100% - 30px);
+    }
+    h1{
+       font-size: 70px;
+    }
+}
+@media(max-width:400px){
+    h1{
+       font-size: 48px;
+    }
+}

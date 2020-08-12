@@ -1,0 +1,9 @@
+<form [formGroup]="playersNamesForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="names" *ngFor="let nameElement of formData.controls; let i = index;">
+    <div [formGroupName]="i">
+      <input formControlName="name" placeholder="Imię gracza">
+      <p class="error" *ngIf="(submitted && nameElement.invalid) || (nameElement.dirty && nameElement.invalid)">nazwa wymagana</p>
+    </div>
+    </div>
+</form>
+
